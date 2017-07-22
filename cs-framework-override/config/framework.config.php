@@ -700,11 +700,29 @@ $options[]      = array(
     'icon'          => 'fa fa-shopping-basket',
     'fields'      => array(
            
+         array(
+                  'id'      => 'unique_option_3110',
+                  'type'    => 'color_picker',
+                  'title'   => 'Background Color',
+                  'default' => '#FAFAFA',
+                  'rgba'    => true,
+                ),     
         array(
-            'id'      => 'fy_service',
+            'id'      => 'fy_shop_title',
             'type'    => 'text',
-            'title'   => esc_html__('Portfolio Section', 'fox-eye'),
-            'desc'    => esc_html__('Add Your Portfolio Info', 'fox-eye'),
+            'title'   => esc_html__('Shop Title', 'fox-eye'),
+            'desc'    => esc_html__('Add Your Shop Info', 'fox-eye'),
+        ),
+        array(
+            'id'      => 'fy_shop_description',
+            'type'    => 'textarea',
+            'title'   => esc_html__('Shop Description', 'fox-eye'),
+            
+        ),array(
+            'id'      => 'fy_product_limit',
+            'type'    => 'text',
+            'title'   => esc_html__('Product Limit Show', 'fox-eye'),
+            
         ),
 
     ),
@@ -846,6 +864,12 @@ $options[]      = array(
     'fields'      => array(
            
         array(
+            'id'      => 'fox_eye_gmap_api',
+            'type'    => 'text',
+            'title'   => esc_html__('Map API', 'fox-eye'),
+            'desc'    => esc_html__('Add Your Map API', 'fox-eye'),
+        ),
+        array(
             'id'      => 'fy_map_title',
             'type'    => 'text',
             'title'   => esc_html__('Map Title', 'fox-eye'),
@@ -853,7 +877,7 @@ $options[]      = array(
         ),
         array(
             'id'      => 'fy_map_icon',
-            'type'    => 'text',
+            'type'    => 'image',
             'title'   => esc_html__('Map Icon', 'fox-eye'),
             'desc'    => esc_html__('Add Map Icon', 'fox-eye'),
         ),
@@ -868,6 +892,11 @@ $options[]      = array(
             'type'    => 'text',
             'title'   => esc_html__('Map Longitude', 'fox-eye'),
             'desc'    => esc_html__('Put Longitude Info', 'fox-eye'),
+        ),array(
+            'id'      => 'fy_map_zoom',
+            'type'    => 'text',
+            'title'   => esc_html__('Map Zoom', 'fox-eye'),
+            'desc'    => esc_html__('Put Zoom Info', 'fox-eye'),
         ),
 
     ),

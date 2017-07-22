@@ -1,14 +1,40 @@
+<?php
+/**
+ * The template for displaying one page content.
+ * Counter Up Section
+ * @package fox-eye
+ */ 
+ 	$fy_shop_title = '';
+ 	$fy_shop_description = '';
+ 	$fy_product_limit = '';
+ 	$section_bg = '';
+  
+if (function_exists('cs_get_option')):
+	
+    $section_bg = cs_get_option('unique_option_3010');
+
+    $fy_shop_title = cs_get_option('fy_shop_title');
+    $fy_shop_description = cs_get_option('fy_shop_description');
+    $fy_product_limit = cs_get_option('fy_product_limit');
+   
+
+endif;
+
+?>
 <!--
 		   produc-section-start   	  
 		======================================= -->
-		<div class="produc-section" id="shop">
+		<div class="produc-section" id="shop" <?php if (!empty($section_bg)): echo 'style="background:'.esc_attr($section_bg).'"'; endif; ?>>
 			<div class="all-heading">
-				<h2>our PRODUCTS</h2>
+			<?php if(!empty(fy_shop_title)): ?>
+				<h2><?php echo esc_html($fy_shop_title); ?></h2>
+			<?php endif; ?>	
 				<div class="heading-icon">
 					<span class="plus"></span>
 				</div>   
-				<p>Compellingly extend total linkage and resource maximizing niche markets. Conveniently enhance ac
-				Assertively benchmark enabled convergence via cost effective vortals.</p>
+				<?php if(!empty($fy_shop_description)): ?>
+				<p><?php echo esc_html($fy_shop_description); ?></p>
+			<?php endif; ?>
 			</div>
 			<div class="container">
 				<div class="row">
